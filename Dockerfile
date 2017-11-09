@@ -1,6 +1,7 @@
-FROM debian:jessie
+FROM debian:latest
 
-MAINTAINER Tomohisa Kusano <siomiz@gmail.com>
+LABEL maintainer="Tomohisa Kusano <siomiz@gmail.com>"
+LABEL contributor="Jon Inazio Sánchez Martínez <captain06@gmail.com>"
 
 ADD https://dl.eff.org/certbot-auto /
 
