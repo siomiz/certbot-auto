@@ -1,6 +1,8 @@
-## Usage example 
+## Usage
 
-`certbot-auto` command is replaced by the first 4 lines:
+Replace `certbot-auto` command with `docker run ... siomiz/certbot-auto`.
+
+Examples:
 
 ```
 docker run \
@@ -10,12 +12,11 @@ docker run \
   certonly --standalone -d your.fqdm
 ```
 
-In my case I used another certbot config, port parameter was not needed and I passed as /etc/letsencrypt another directory, a Windows directory indeed:
-
+on Windows:
 ```
 docker run \
   --rm -it \
-  D:/le:/etc/letsencrypt \
+  -v D:/le:/etc/letsencrypt \
   siomiz/certbot-auto \
   certonly --manual --preferred-challenges=dns -d your.fqdm
 ```
